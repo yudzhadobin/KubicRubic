@@ -1,11 +1,16 @@
 package Model;
 
+
+
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Side {
     Cell[][] field;
 
-    private final int SIZE = 9;
+    public static final int SIZE = 9;
 
 
     public Cell[][] getField() {
@@ -28,5 +33,16 @@ public class Side {
                 field[i][j] = new Cell(color);
             }
         }
+    }
+
+    public Image getView() throws IOException{
+        BufferedImage view = new BufferedImage(SIZE*Settings.SIZE_OF_IMAGE, SIZE*Settings.SIZE_OF_IMAGE,BufferedImage.TYPE_INT_RGB);
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                view.getGraphics().drawImage(field[i][j].getView(), i * Settings.SIZE_OF_IMAGE, j * Settings.SIZE_OF_IMAGE, Settings.SIZE_OF_IMAGE, Settings.SIZE_OF_IMAGE, null);
+            }
+        }
+        view.getGraphics().drawImage(ImageIO.read(getClass().getResource("D:\\MyPrj\\KubicRubic\\images\\YELLOW.jpg")),0,0,null);
+        return view;
     }
 }
