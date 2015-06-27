@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Side {
     Cell[][] field;
 
-    public static final int SIZE = 9;
+    public static final int SIZE = 3;
 
 
     public Cell[][] getField() {
@@ -42,7 +42,7 @@ public class Side {
                 view.getGraphics().drawImage(field[i][j].getView(), i * Settings.SIZE_OF_IMAGE, j * Settings.SIZE_OF_IMAGE, Settings.SIZE_OF_IMAGE, Settings.SIZE_OF_IMAGE, null);
             }
         }
-        view.getGraphics().drawImage(ImageIO.read(getClass().getResource("D:\\MyPrj\\KubicRubic\\images\\YELLOW.jpg")),0,0,null);
+
         return view;
     }
 }

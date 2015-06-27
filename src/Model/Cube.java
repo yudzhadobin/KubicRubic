@@ -52,11 +52,11 @@ public class Cube {
         try {
             view.getGraphics().drawImage(left.getView(), 0, sizeOfOneSide, null);
 
-            view.getGraphics().drawImage(top.getView(), sizeOfOneSide, sizeOfOneSide, null);
-            view.getGraphics().drawImage(right.getView(), sizeOfOneSide * 2, sizeOfOneSide, null);
-            view.getGraphics().drawImage(back.getView(), sizeOfOneSide, 0, null);
-            view.getGraphics().drawImage(front.getView(), sizeOfOneSide, sizeOfOneSide * 2, null);
-            view.getGraphics().drawImage(bottom.getView(), sizeOfOneSide, sizeOfOneSide * 3, null);
+            view.getGraphics().drawImage(top.getView(), sizeOfOneSide, sizeOfOneSide,sizeOfOneSide,sizeOfOneSide, null);
+            view.getGraphics().drawImage(right.getView(), sizeOfOneSide * 2, sizeOfOneSide,sizeOfOneSide,sizeOfOneSide, null);
+            view.getGraphics().drawImage(back.getView(), sizeOfOneSide, 0,sizeOfOneSide,sizeOfOneSide, null);
+            view.getGraphics().drawImage(front.getView(), sizeOfOneSide, sizeOfOneSide * 2,sizeOfOneSide,sizeOfOneSide, null);
+            view.getGraphics().drawImage(bottom.getView(), sizeOfOneSide, sizeOfOneSide * 3,sizeOfOneSide,sizeOfOneSide, null);
         } catch (IOException excep) {
             System.out.println(excep.toString());
             return null;

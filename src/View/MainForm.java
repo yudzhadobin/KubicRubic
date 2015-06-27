@@ -12,12 +12,13 @@ import java.awt.*;
 public class MainForm  extends JFrame{
     public MainForm() {
         super();
-        this.add(new Panel());
-
+        this.setSize(new Dimension(1900,1900));
+       this.setVisible(true);
     }
 
     public static void main(String[] args) {
-        new MainForm().setVisible(true);
+       MainForm form = new MainForm();
+       form.getGraphics().drawImage(Cube.getInstance().getView(),0,0,900,900,null);
     }
 }
 
