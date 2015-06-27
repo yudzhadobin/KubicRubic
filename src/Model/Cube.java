@@ -5,6 +5,9 @@ import java.awt.*;
 public class Cube {
     private final static Cube instance= new Cube();
 
+
+    private Cube() {}
+    
     final Side left = new Side(Color.YELLOW);
     final Side top = new Side(Color.WHITE);
     final Side right = new Side(Color.GREEN);
