@@ -14,27 +14,13 @@ public class MainForm  extends JFrame{
         super();
         this.setSize(new Dimension(1900,1900));
        this.setVisible(true);
+       this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
        MainForm form = new MainForm();
-       form.getGraphics().drawImage(Cube.getInstance().getView(),0,0,900,900,null);
+       form.getGraphics().drawImage(Cube.getInstance().getView(),30,30,900,900,null);
     }
 }
 
 
-class Panel extends JPanel {
-
-    @Override
-    public void paintComponents(Graphics g) {
-
-        try {
-            g.drawImage(Cube.getInstance().getView(), 0, 0, null);
-        } catch (Exception e) {
-
-        }
-
-    }
-
-
-}
